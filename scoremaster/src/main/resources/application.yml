@@ -1,0 +1,24 @@
+server:
+  port: 9081
+
+kafka:
+  bootstrap-urls: localhost:9092
+  consumer:
+    topic-name: user-score-update-event
+    max-poll-records: 10
+    fetch-max-wait-config: 500
+    db-group-id: score-master-db
+    cache-group-id: score-master-cache
+
+redis:
+  host: localhost
+  port: 6379
+  max-records: 100
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/gameverse
+    username: root
+  application:
+    name: "scoremaster"

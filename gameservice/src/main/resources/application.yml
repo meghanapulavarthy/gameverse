@@ -1,0 +1,11 @@
+server:
+  port: 9080
+  contextPath: /game-service
+
+kafka:
+  bootstrap-urls: localhost:9092
+  topic-name: user-score-update-event
+
+spring:
+  application:
+    name: "gameservice"
